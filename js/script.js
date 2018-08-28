@@ -23,7 +23,7 @@ items.addEventListener('mousemove', (e) => {
 	e.preventDefault();
 	if(!mouse) return;
 	const x = e.pageX - items.offsetLeft;
-	const passing = x - startX;
-	items.scrollLeft = (scrollLeft - passing)*2;
+	const passing = startX - x;
+	items.scrollLeft = scrollLeft - passing*3;
 	console.log(`startX:${startX} scrollLeft:${scrollLeft} passing:${passing}`);
 });
